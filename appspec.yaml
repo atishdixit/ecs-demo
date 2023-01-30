@@ -1,0 +1,9 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:ap-south-1:153171915354:task-definition/ecs-demo-td:2"
+        LoadBalancerInfo:
+          ContainerName: "ecs-test-container"
+          ContainerPort: 8000
